@@ -3,6 +3,8 @@ window.onload = function () {
   form.onsubmit = function (event) {
     event.preventDefault();
 
+    let headElem = document.getElementById('headElem');
+
     let readNum = document.getElementById('readNum');
     readNum.setAttribute("class", "hidden");
     let foodNum = document.getElementById('foodNum');
@@ -22,6 +24,14 @@ window.onload = function () {
     const getMagicNum = parseInt(document.querySelector('input#magicNum').value);
 
     const error = 'All fields must be filled.';
+
+    const buyShit = function(){
+      alert('buy some shit.');
+    }
+
+    headElem.addEventListener("click", buyShit, {once:true});
+
+
 
 
   if(getReadNum && getFoodNum && getMagicNum){ 
